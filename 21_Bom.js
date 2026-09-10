@@ -120,3 +120,37 @@ let bom15 = () => {
     // 17.367803336682275,78.53685536562719
   })
 }
+
+//!WEB STORAGE SYSTEMS
+
+//!sessionStorage
+
+//*setItem()
+// sessionStorage.setItem("name","Yasin")
+// sessionStorage.setItem("age",30)
+// sessionStorage.setItem("place", "Ooty")
+
+//*getItem()
+// console.log(sessionStorage.getItem("name"))
+
+//*removeItem()
+// sessionStorage.removeItem("place")
+
+//*clear()
+// sessionStorage.clear()
+
+//!localStorage
+
+//*setItem()
+// localStorage.setItem("name","Monty")
+// localStorage.setItem("age",28)
+// localStorage.setItem("place", "Gulbarga")
+
+//*getItem()
+// console.log(localStorage.getItem("name"))
+
+//*removeItem()
+// localStorage.removeItem("place")
+
+//*clear()
+// localStorage.clear()
