@@ -55,21 +55,86 @@
 // }
 
 //!Accessing the text content
-let paragraph = document.getElementById("para")
-console.log(paragraph)
+// let paragraph = document.getElementById("para")
+// console.log(paragraph)
 //*innerText -- displays only the visible content on UI
-console.log(`innerText: ${paragraph.innerText}`)
+// console.log(`innerText: ${paragraph.innerText}`)
 //*textContent -- displays the content even if it is hidden
-console.log(`textContent: ${paragraph.textContent}`)
+// console.log(`textContent: ${paragraph.textContent}`)
 //*innerHTML -- HTML Tags + Attributes
-console.log(`innerHTML: ${paragraph.innerHTML}`)
+// console.log(`innerHTML: ${paragraph.innerHTML}`)
 
 //!Setting the text content
-let container = document.getElementById("container")
-console.log(container)
-container.innerText = "Hello from Inner Text"
-container.textContent = "Hello from Text Content"
-container.innerHTML = `<h1 style=color:red;>Hello from Inner HTML</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ?</p>
-<button>Click</button>
-`
+// let container = document.getElementById("container")
+// console.log(container)
+// container.innerText = "Hello from Inner Text"
+// container.textContent = "Hello from Text Content"
+// container.innerHTML = `<h1 style=color:red;>Hello from Inner HTML</h1>
+// <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ?</p>
+// <button>Click</button>
+// `
+
+//!Working with attributes
+// let hyperLink = document.querySelector("a")
+// console.log(hyperLink)
+
+//!getAttribute()
+// console.log(hyperLink.getAttribute("href"))
+
+//!setAttribute()
+// hyperLink.setAttribute("target", "_blank")
+
+//!removeAttribute()
+// hyperLink.removeAttribute("href")
+
+//!Class List
+// let dealWithClass = () => {
+//   let heading = document.getElementById("heading")
+//   console.log(heading)
+//*add()
+// heading.classList.add("Fruits", "Modak", "Laddu")
+//*remove()
+// heading.classList.remove("Fruits")
+//*toggle()
+// heading.classList.toggle("Idol")
+//*contains()
+//   console.log(heading.classList.contains("Modak"))
+//   console.log(heading.classList.contains("Fruits"))
+//   console.log(heading.classList.contains("Idol"))
+// }
+
+//!createElement()
+// let para = document.createElement("p")
+// para.innerText = "This is a sample para"
+// console.log(para)
+
+//!append()
+// document.body.append(para)
+
+//!prepend()
+// document.body.prepend(para)
+
+//!remove()
+// para.remove()
+
+//!Dom Traversing
+let h1Tag = document.querySelector("h1")
+console.log(h1Tag)
+
+//!parentElement
+console.log(h1Tag.parentElement)
+
+//!children
+console.log(document.body.children)
+
+//!firstElementChild
+console.log(document.body.firstElementChild)
+
+//!lastElementChild
+console.log(document.body.lastElementChild)
+
+//!nextElementSibling
+console.log(h1Tag.nextElementSibling)
+
+//!previousElementSibling
+console.log(h1Tag.previousElementSibling)
