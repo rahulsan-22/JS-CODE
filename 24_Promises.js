@@ -42,11 +42,51 @@
 //   })
 
 //!Promise.all()
-Promise.all([
-  Promise.resolve(10),
-  Promise.resolve(20),
-  Promise.resolve(30)
+// Promise.all([
+//   Promise.resolve(10),
+//   Promise.resolve(20),
+//   Promise.resolve(30)
+// ])
+// .then((res) => {
+//     console.log(res)
+// })
+
+//!Promise.race() -- (First Settled)
+Promise.race([
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject("First")
+    }, 5000)
+  }),
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Second")
+    }, 10000)
+  })
 ])
-.then((res) => {
+  .then((res) => {
     console.log(res)
-})
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+//!Promise.allSettled() -- (All settled promises)
+Promise.allSettled([
+  Promise.resolve("Success"),
+  Promise.reject("Failure"),
+  Promise.resolve("Success")
+])
+  .then((res) => {
+    console.log(res)
+  })
+
+//!Promise.any() -- (First Fulfilled Promise)
+Promise.any([
+  Promise.reject("Hello"),
+  Promise.resolve("Hi"),
+  Promise.resolve("Bye")
+])
+  .then((res) => {
+    console.log(res)
+  })
